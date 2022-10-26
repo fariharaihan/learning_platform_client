@@ -13,7 +13,7 @@ const Category = () => {
                     subject={subject}
                 ></SubjectSummaryCard>)
             }
-            {/* <SubjectSummaryCard></SubjectSummaryCard> */}
+
         </div>
     );
 };
