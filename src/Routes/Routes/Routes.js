@@ -4,6 +4,7 @@ import Category from "../../Pages/Category/Category";
 import Faq from "../../Pages/Faq/Faq";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
+import LoginOption from "../../Pages/LoginOption/LoginOption";
 import Register from "../../Pages/Register/Register";
 
 import Subjects from "../../Pages/Subjects/Subjects";
@@ -27,6 +28,10 @@ export const routes = createBrowserRouter([
                 path: '/subjects/:id',
                 element: <Subjects></Subjects>,
 
+            },
+            {
+                path: '/loginoption',
+                element: <LoginOption></LoginOption>
             },
             {
                 path: '/login',

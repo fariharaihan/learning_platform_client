@@ -1,12 +1,14 @@
-import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import { GoogleAuthProvider } from 'firebase/auth';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import { Link } from 'react-router-dom';
 
-const GoogleLogin = () => {
+
+const LoginOption = () => {
     const { providerLogin } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();
@@ -21,13 +23,15 @@ const GoogleLogin = () => {
     }
     return (
         <div>
+
             <ButtonGroup vertical>
+                <Button className='my-2' variant="outline-dark"><Link to='/login'> Log in with Email</Link></Button>
                 <Button onClick={handleGoogleSignIn} className='my-2' variant="outline-info"><FaGoogle></FaGoogle> Log in with Google</Button>
-                <Button className='mb-5' variant="outline-dark"><FaGithub></FaGithub> Log in with GitHub</Button>
+                <Button className='my-2' variant="outline-dark"><FaGithub></FaGithub> Log in with GitHub</Button>
 
             </ButtonGroup>
         </div>
     );
 };
 
-export default GoogleLogin;
+export default LoginOption;

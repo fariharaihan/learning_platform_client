@@ -1,41 +1,43 @@
 import React from 'react';
+import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import { Link } from 'react-router-dom';
-import GoogleLogin from '../GoogleLogin/GoogleLogin';
-
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Login = () => {
+
+    const { signIn } = useContext(AuthContext);
+
     return (
-        <div>
-            <Form>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
-                </Form.Group>
+        <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control name="email" type="email" placeholder="Enter email" required />
+            </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-                <Button variant="info" type="submit" className='ms-5'>
-                    <Link to='/register'>Register Here</Link>
-                </Button>
-                <br></br>
-                <GoogleLogin></GoogleLogin>
-            </Form>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control name="password" type="password" placeholder="Password" required />
+            </Form.Group>
 
-        </div>
+            <Button variant="primary" type="submit">
+                Log in
+            </Button>
+            <br></br>
+            <Button variant="info" type="submit" className='mt-3'>
+                <Link to='/register'>Sign Up Here</Link>
+            </Button>
+            <br></br>
+            <Form.Text className="text-danger">
+
+
+            </Form.Text>
+
+        </Form>
+
+
     );
 };
 
