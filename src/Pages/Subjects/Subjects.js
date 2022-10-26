@@ -1,9 +1,11 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Subjects = () => {
+
     return (
         <div>
-            <h3>This is subjects</h3>
+
         </div>
     );
 };
