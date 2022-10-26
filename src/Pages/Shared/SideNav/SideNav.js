@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
-const RightSideNav = () => {
+const SideNav = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
@@ -16,17 +16,13 @@ const RightSideNav = () => {
 
     return (
         <div>
-
-            <h3>All category: {categories.length}</h3>
-            <div>
-                {
-                    categories.map(category => <p key={category.id}>
-                        <Button variant="outline-secondary"><Link to={`/category/${category.id}`}>{category.name}</Link></Button>
-                    </p>)
-                }
-            </div>
+            {
+                categories.map(category => <p key={category.id}>
+                    <Button variant="outline-secondary"><Link to={`/category/${category.id}`}>{category.name}</Link></Button>
+                </p>)
+            }
         </div>
     );
 };
 
-export default RightSideNav;
+export default SideNav;
