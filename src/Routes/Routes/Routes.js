@@ -8,9 +8,8 @@ import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import LoginOption from "../../Pages/LoginOption/LoginOption";
 import Register from "../../Pages/Register/Register";
-
-import Subjects from "../../Pages/Subjects/Subjects";
 import Vlog from "../../Pages/Vlog/Vlog";
+
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
@@ -57,6 +56,7 @@ export const routes = createBrowserRouter([
                 path: '/vlog',
                 element: <Vlog></Vlog>
             }
+
         ],
 
     },

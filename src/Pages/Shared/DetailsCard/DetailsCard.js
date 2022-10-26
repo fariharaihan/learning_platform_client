@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const DetailsCard = ({ subject }) => {
-    const { title, details, image_url, rating, total_view, starting_date } = subject
+    const { title, details, image_url, rating, total_view, starting_date, fee } = subject
     return (
         <Card>
             <Card.Body>
@@ -17,6 +17,9 @@ const DetailsCard = ({ subject }) => {
                 </Card.Text>
                 <Card.Text className='text-primary fs-5'>
                     Course starting date: {starting_date}
+                </Card.Text>
+                <Card.Text className='text-primary fs-4'>
+                    Course Fee: $ {fee}
                 </Card.Text>
                 <Button variant="info"><Link to="/checkout">Get premium access</Link></Button>
             </Card.Body>

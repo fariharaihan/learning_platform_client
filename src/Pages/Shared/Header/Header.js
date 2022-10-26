@@ -8,6 +8,7 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import Image from 'react-bootstrap/Image'
 import { FaUser } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 
 
 const Header = () => {
@@ -60,7 +61,14 @@ const Header = () => {
                                 :
                                 <Link to='/login'>Log in</Link>
                             }
+
                         </Nav.Link>
+                        <Nav className='ms-4'>
+                            <Form.Check
+                                type="switch"
+                                id="custom-switch"
+                            />
+                        </Nav>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

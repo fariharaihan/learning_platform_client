@@ -68,8 +68,8 @@ const Login = () => {
                         <br></br>
                         <LoginOption></LoginOption>
                         <br></br>
-                        <Button variant="info" type="submit" className='mt-3'>
-                            <Link to='/register'>Sign Up Here</Link>
+                        <Button variant="outline-dark" type="submit" >
+                            <Link to='/register'>Register Here</Link>
                         </Button>
 
 
