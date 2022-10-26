@@ -31,13 +31,14 @@ const Header = () => {
                     />
                 </Navbar.Brand>
 
-                <Navbar.Brand > <Link to='/'> IT Courses</Link> </Navbar.Brand>
+                <Navbar.Brand > <Link to='/'> Career Hunt</Link> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link><Link to='/'>Home</Link></Nav.Link>
                         <Nav.Link><Link to='/category/:id'>Courses</Link></Nav.Link>
                         <Nav.Link><Link to='/faq'>FAQ</Link></Nav.Link>
+                        <Nav.Link><Link to='/vlog'>Vlog</Link></Nav.Link>
                         <Nav.Link></Nav.Link>
 
                     </Nav>
