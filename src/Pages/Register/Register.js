@@ -6,42 +6,46 @@ import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('')
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
-        const firstName = form.firstName.value;
-        const lastName = form.lastName.value;
+        const name = form.name.value;
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(firstName, lastName, photoURL, email, password);
+
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                form.reset()
                 setError('')
+                form.reset()
+                handleUpdateUserProfile(name, photoURL)
             })
             .catch(error => {
                 console.error(error)
                 setError(error.message)
             })
     }
+    const handleUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(e => console.log(e));
+    }
 
     return (
         <div>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>First Name</Form.Label>
-                    <Form.Control name="firstName" type="text" placeholder="Enter First name" />
-
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Last Name</Form.Label>
-                    <Form.Control name="lastName" type="text" placeholder="Enter Last name" />
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control name="name" type="text" placeholder="Enter your name" />
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -6,6 +6,8 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
+import SideNav from '../Shared/SideNav/SideNav';
 
 
 const LoginOption = () => {
@@ -21,17 +23,19 @@ const LoginOption = () => {
             })
             .catch(error => console.error(error))
     }
+
     return (
         <div>
-
             <ButtonGroup vertical>
-                <Button className='my-2' variant="outline-dark"><Link to='/login'> Log in with Email</Link></Button>
+
                 <Button onClick={handleGoogleSignIn} className='my-2' variant="outline-info"><FaGoogle></FaGoogle> Log in with Google</Button>
                 <Button className='my-2' variant="outline-dark"><FaGithub></FaGithub> Log in with GitHub</Button>
-
             </ButtonGroup>
+
+
         </div>
     );
 };
 
 export default LoginOption;
+

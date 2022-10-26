@@ -4,7 +4,7 @@ import Login from '../Login/Login';
 const CheckOut = () => {
     return (
         <div>
-            <Login></Login>
+            <h3>this is checkout page</h3>
         </div>
     );
 };
