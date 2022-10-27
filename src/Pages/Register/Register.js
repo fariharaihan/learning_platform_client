@@ -44,8 +44,8 @@ const Register = () => {
         <div className='border p-5'>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control name="name" type="text" placeholder="Enter your name" />
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control name="name" type="text" placeholder="Enter your Full name" />
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
