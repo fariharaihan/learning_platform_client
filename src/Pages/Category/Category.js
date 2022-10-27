@@ -14,6 +14,7 @@ const Category = () => {
                         <SideNav></SideNav>
                     </Col>
                     <Col lg="8">
+                        <h3>Welcome to our special courses...</h3>
                         {
                             subjects.map(subject => <SubjectSummaryCard
                                 key={subject.id}

@@ -34,12 +34,9 @@ const LoginOption = () => {
     return (
         <div>
             <ButtonGroup vertical>
-
                 <Button onClick={handleGoogleSignIn} className='my-2' variant="outline-info"><FaGoogle></FaGoogle> Log in with Google</Button>
                 <Button onClick={handleGitHubSignIn} className='my-2' variant="outline-dark"><FaGithub></FaGithub> Log in with GitHub</Button>
             </ButtonGroup>
-
-
         </div>
     );
 };

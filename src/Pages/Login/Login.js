@@ -4,11 +4,11 @@ import { useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import LoginOption from '../LoginOption/LoginOption';
 import SideNav from '../Shared/SideNav/SideNav';
+
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -71,16 +71,10 @@ const Login = () => {
                         <Button variant="outline-dark" type="submit" >
                             <Link to='/register'>Register Here</Link>
                         </Button>
-
-
                     </Form>
-
                 </Col>
             </Row>
         </Container>
-
-
-
     );
 };
 

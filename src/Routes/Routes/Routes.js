@@ -19,18 +19,18 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
             },
             {
                 path: '/category/:id',
                 element: <Category></Category>,
-                loader: ({ params }) => fetch(`http://localhost:5000/subjects/${params.id}`)
+                loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-fariharaihan.vercel.app/subjects/${params.id}`)
 
             },
             {
                 path: '/coursedetails/:id',
                 element: <CourseDetails></CourseDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/subjects/${params.id}`)
+                loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-fariharaihan.vercel.app/subjects/${params.id}`)
             },
             {
                 path: '/loginoption',
@@ -56,9 +56,7 @@ export const routes = createBrowserRouter([
                 path: '/vlog',
                 element: <Vlog></Vlog>
             }
-
         ],
-
     },
     {
         path: '*',

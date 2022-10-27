@@ -20,9 +20,7 @@ const CourseDetails = () => {
                                 subject={subject}
                             ></DetailsCard>)
                         }
-
                     </Col>
-
                 </Row>
             </Container>
 

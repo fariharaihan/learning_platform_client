@@ -16,11 +16,10 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                console.log(user);
                 setError('')
                 form.reset()
                 handleUpdateUserProfile(name, photoURL)
@@ -30,6 +29,7 @@ const Register = () => {
                 setError(error.message)
             })
     }
+
     const handleUpdateUserProfile = (name, photoURL) => {
         const profile = {
             displayName: name,
@@ -41,7 +41,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className='border p-5'>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
